@@ -1,0 +1,32 @@
+include ../components/tools-card
+
+section.tools.background-col-1-100#tools
+	.tools__img__container
+		picture
+			source(media="(min-width:62.875rem)" srcset="./assets/images/png/tools/chosen-tool.png")
+			source(media="(min-width:40.188rem)" srcset="./assets/images/png/tools/chosen-tool-643.png")
+			img.margin-inline-start-auto.display__block.tools__img(src="./assets/images/png/tools/chosen-tool-mobile.png" alt="" loading="lazy")
+	.margin__inline__auto.max-inline-size-container.tools__container
+		h2.color-col-1-25.font__weight__normal.font-family-ff-base-400.max-inline-size-792.tools__title Find the 
+			span.heading-font.tools__title__highlighted tool
+			|  that suits your needs
+		include tools-form
+		button.desktop__display__none.open__filter__form__btn.border-none.position__fixed.transition__translate__ei.hide#open__filter__form__btn
+			svg.fill-col-1-75.display__block(width="20" height="18" viewBox="0 0 20 18")
+				use(href="./assets/images/svg/icons.svg#open-filter-form-icon")
+			span.overflow-hidden.no__padding.no__opacity.sr__only.position-absolute Open filter form
+		.tools__grid.display-grid.gap-16-24#tools__grid
+			//- +toolCard(10)
+		.tools__pagination.display__flex.gap-8.hide#tools__pagination
+			//- a.padding-8-16.selected.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 1
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 2
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 3
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 4
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 5
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 6
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 7
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 8
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 9
+			//- a.padding-8-16.background-transparent.color-col-1-25.border-col-1-25.text-decoration-none.tools__pagination__link(href="#") 10
+			
+			

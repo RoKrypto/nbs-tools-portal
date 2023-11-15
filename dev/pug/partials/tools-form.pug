@@ -1,0 +1,42 @@
+.tools__form__container.smooth-scroll.hide.display__flex.flex-direction-column.gap-24.inline-size-100.background-col-1-25.position__fixed.transition__translate__ei#tools__form__container
+	button.display__block.border-radius-4.margin-inline-start-auto.background-transparent.desktop__display__none.tools__form__close__btn#tools__form__close__btn 
+		svg.display__block(width="16" height="16" viewBox="0 0 16 16")
+			use(href="./assets/images/svg/icons.svg#close-filter-form-icon")
+		span.sr__only.overflow-hidden.no__padding.position-absolute.tools__form__clear__btn__text Close form
+	form.tools__form.display-grid.gap-16-24.grid__template__columns__2__auto#tools__form
+		fieldset.grid-column-1-minus-1.no__margin__inline.no__padding.display__flex.flex-direction-column.gap-8.border-none.tools__form__fieldset.tools__name
+			label.font-family-ff-base-400.border-none.tools__form__label(for="tool-name") Tool's name
+			input.padding-8-16.background-transparent.border-radius-4.border-col-1-75.desktop__border__color__1__25.tools__form__input(id="tool-name" type="search" name="tool_name")
+		fieldset.grid-column-1-minus-1.no__margin__inline.no__padding.display__flex.flex-direction-column.gap-8.border-none.tools__form__fieldset.desktop__grid__row__1__minus__1.tools__category
+			label.font-family-ff-base-400.border-none.tools__form__label(for="category") Category
+			select.padding-8-16.border-radius-4.border-col-1-75.background-transparent.desktop__border__color__1__25.tools__form__select(id="category" name="category")
+				//- option(value="") ---
+				//- option(value="Category 1") Category 1
+				//- option(value="Category 2") Category 2
+				//- option(value="Category 3") Category 3
+		fieldset.grid-column-1-minus-1.no__margin__inline.no__padding.display__flex.flex-direction-column.gap-8.border-none.tools__form__fieldset.desktop__grid__row__1__minus__1.utility__mq__42__grid__row__2__3.tools__author__name
+			label.font-family-ff-base-400.tools__form__label.border-none(for="author-name") Author's name
+			select.padding-8-16.border-radius-4.border-col-1-75.background-transparent.desktop__border__color__1__25.tools__form__select(id="author-name" name="author_name")
+				//- option(value="") ---
+				//- option(value="Author 1" translate="no") Author 1
+				//- option(value="Author 2" translate="no") Author 2
+				//- option(value="Author 3" translate="no") Author 3
+		fieldset.grid-column-1-minus-1.no__margin__inline.no__padding.display__flex.flex-direction-column.gap-8.border-none.tools__form__fieldset.desktop__grid__row__1__minus__1.utility__mq__42__grid__row__2__3.tools__author__country
+			label.font-family-ff-base-400.tools__form__label.border-none(for="author-country") Author's country
+			select.padding-8-16.border-radius-4.border-col-1-75.background-transparent.desktop__border__color__1__25.tools__form__select(id="author-country" name="author_country")
+				//- option(value="") ---
+				//- option(value="Country 1") Country 1
+				//- option(value="Country 2") Country 2
+				//- option(value="Country 3") Country 3
+		button.background-transparent.padding-8-16.border-radius-4.border-col-1-75.display__flex.align-items-center.gap-8.desktop__grid__row__1__minus__1.desktop__border__color__1__25.desktop__align__self__end.tools__form__clear__btn#tools__clear__btn(type="button")
+			svg.fill-col-1-75.desktop__svg.display__block(width="16" height="14" viewBox="0 0 16 14")
+				use(href="./assets/images/svg/icons.svg#clear-form-icon")
+			span.color-col-1-75.font-size-16.desktop__sr__only.desktop__overflow__hidden.desktop__no__padding.desktop__position__absolute.tools__form__clear__btn__text Clear
+		button.padding-8-16.border-radius-4.display__flex.align-items-center.gap-8.border-none.background-col-1-75.utility__mq__32__display__flex.justify-self-end.desktop__grid__row__1__minus__1.desktop__align__self__end.tools__form__filter__btn#tools__filter__btn(type="button")
+			svg.desktop__svg.display__block.fill-col-1-25(width="16" height="10" viewBox="0 0 16 10")
+				use(href="./assets/images/svg/icons.svg#filter-form-icon")
+			span.color-col-1-25.font-size-16.desktop__sr__only.desktop__overflow__hidden.desktop__no__padding.desktop__position__absolute.tools__form__filter__btn__text Filter tools
+	.tools__form__status.desktop__no__padding.hide.display__inline-flex.padding-8-16.border-radius-4.gap-8.shaking-warning.desktop__no__margin__block__start#tools__form__status
+		svg.fill-col-1-75.display__block.tools__form__status__icon(width="16" height="16" viewBox="0 0 16 16")
+			use(href="./assets/images/svg/icons.svg#warning-icon")
+		p.color-col-1-75.font-family-ff-base-400.no__margin__block.tools__form__status__message#tools__form__status__message Provide an input to at least one field to filter the tools.

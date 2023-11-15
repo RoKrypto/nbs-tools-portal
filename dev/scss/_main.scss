@@ -1,0 +1,226 @@
+@use 'functions' as *;
+
+body {
+	&::before {
+		content: '';
+		backdrop-filter: blur(to__em(4px));
+	}
+
+	&.overlay::before {
+		inset: 0;
+		opacity: 1;
+		transition: opacity .25s ease-in;
+	}
+}
+
+.header {
+	padding-block: clamp(to__em(16px), 1.02rem + 2.0833vw, to__em(48px));
+
+	@at-root .nbs-logo, .ims-logo {
+		inline-size: auto;
+		block-size: clamp(to__em(45px), 3.28rem + 4.362vw, to__em(112px));
+	}
+
+	.nbs-logo {
+		fill: var(--col-1-50);
+	}
+	
+	.ims-logo {
+		fill: var(--col-2-25);
+	}
+
+	&__container {
+		inline-size: min(88.57%, to__em(1764px));
+	}
+}
+
+.hero {
+	background-color: var(--col-2-25);
+
+	&__title, &__cta {
+		color: var(--col-base);
+	}
+
+	&__title {
+		font-size: clamp(to__em(24px), 2.25rem + 0.5208vw, to__em(32px));
+	}
+
+	&__cta {
+		border: to__em(1px) solid var(--col-base);
+		padding: clamp(to__em(8px), 0.65rem + 0.5208vw, to__em(16px)) clamp(to__em(16px), 1.31rem + 1.0417vw, to__em(32px));
+		font-size: clamp(to__em(16px), 1.45rem + 0.521vw, to__em(24px));
+	}
+}
+
+.appended-icon::after {
+	content: '↓';
+}
+
+.purpose {
+	&__img {
+		inline-size: min(88.57%, to__em(589px));
+	}
+
+	&__copy {
+		inline-size: min(88.57%, to__em(1064px));
+		gap: to__em(48px);
+	}
+
+	&__group::before {
+		inline-size: to__em(53px);
+	}
+
+	@at-root .emoji {
+		&__dizzy::before {
+			content: url('../images/png/emojis/emoji-dizzy.png');
+		}
+
+		&__thinking::before {
+			content: url('../images/png/emojis/emoji-thinking.png');
+		}
+
+		&__shaking__hands::before {
+			content: url('../images/png/emojis/emoji-shaking-hands.png');
+		}
+	}
+
+	&__title {
+		color: var(--col-2-25);
+	}
+}
+
+.tools {
+	padding-block-end: clamp(to__em(24px), 1.96rem + 1.5625vw, to__em(48px));
+
+	&__img {
+		inline-size: min(94.29%, to__em(948px));
+
+		&__container {
+			background-image: linear-gradient(var(--col-base) 50%, var(--col-1-100) 50%);
+
+			@at-root .open__filter__form__btn {
+				right: to__em(16px);
+				bottom: to__em(16px);
+				padding: to__em(11px) to__em(10px);
+				border-radius: 50%;
+				background-color: var(--col-4-100);
+
+				&.go__off__screen {
+					translate: calc(100% + to__em(16px)) 0;
+				}
+			}
+		}
+	}
+
+	&__title  {
+		font-size: clamp(to__em(24px), 1.38rem + 3.6458vw, to__em(80px));
+	}
+
+	&__form {
+		flex-grow: 1;
+
+		&__container {
+			bottom: 0;
+			left: 0;
+			max-block-size: 88%;
+			overflow-y: auto;
+			padding: to__em(24px) to__em(16px);
+			border-radius: to__em(4px) to__em(4px) 0 0;
+			translate: 0 100%;
+
+			&.show {
+				translate: 0;
+			}
+		}
+	
+		&__close__btn {
+			padding: to__em(12px);
+			border: to__em(1px) solid var(--col-1-75);
+		}
+
+		&__clear__btn {
+			justify-self: left;
+		}
+
+		&__status {
+			border: 1px solid var(--col-4-100);
+			background-color: var(--col-4-50);
+			margin-block-start: auto;
+
+			&__icon {
+				flex-shrink: 0;
+			}
+
+			&__message {
+				font-size: clamp(to__em(12px), 1.13rem + 0.2604vw, to__em(16px));
+			}
+		}
+	}
+
+	&__card {
+		&__info {
+			padding: clamp(to__em(16px), 1.45rem + 0.5208vw, to__em(24px));
+		}
+
+		&__name__link {
+			color: var(--col-3);
+			text-underline-offset: to__em(4px);
+			font-size: to__em(24px);
+		}
+
+		&__author {
+			text-underline-offset: to__em(2px);
+		}
+
+		&__categories {
+			flex-wrap: wrap;
+		}
+
+		&__category {
+			background-color: var(--col-1-25-trans);
+		}
+	}
+
+	&__pagination {
+		overflow-x: auto;
+		margin-block-start: clamp(to__em(24px), 1.96rem + 1.5625vw, to__em(48px));
+
+		&__link {
+			border-radius: to__em(8px);
+			font-family: var(--ff-base-700);
+
+			&.selected {
+				color: var(--col-1-100);
+			}
+		}
+	}
+}
+
+.shaking-warning {
+	animation: shake .75s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(to__em(-1px), 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(to__em(2px), 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(to__em(-4px), 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(to__em(4px), 0, 0);
+  }
+}
+
+.footer {
+	&__container {
+		padding-block: clamp(to__em(24px), 1.96rem + 1.5625vw, to__em(48px));
+		border-top: 1px solid var(--col-1-25);
+	}
+}

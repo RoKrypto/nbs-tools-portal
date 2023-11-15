@@ -1,0 +1,18 @@
+:root {
+	/* Fonts Vars*/
+	--ff-base-400: 'Nestle Text TF Book', Helvetica, Arial, system-ui, sans-serif;
+	--ff-base-700: 'Nestle Text TF Bold', Helvetica, Arial, system-ui, sans-serif;
+	--ff-heading: 'Nestle Brush Regular', Helvetica, Arial, system-ui, sans-serif;
+
+	/* Colors */
+	--col-base: hsl(0, 0%, 100%);
+	--col-1-25: hsl(37, 16%, 78%);
+	--col-1-25-trans: hsla(37, 16%, 78%, .13);
+	--col-1-50: hsl(30, 12%, 49%);
+	--col-1-75: hsl(40, 3%, 20%);
+	--col-1-100: hsl(180, 1%, 14%);
+	--col-2-25: hsl(324, 100%, 40%);
+	--col-3: hsl(199, 76%, 64%);
+	--col-4-50: hsl(35, 100%, 88%);
+	--col-4-100: hsl(35, 100%, 75%);
+}

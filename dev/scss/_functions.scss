@@ -1,0 +1,5 @@
+@use 'vars' as *;
+
+@function to__em($pixels, $base: $root__font__size) {
+	@return ($pixels/$base) * 1rem;
+}

@@ -1,0 +1,18 @@
+include tools-category-link
+
+mixin toolCard(toolsQty)
+	- let n = 0
+	while n < toolsQty
+		.tools__card.border-radius-4.border-col-1-25.overflow-hidden.background-col-1-75
+			img.display__block.inline-size-100.tools__featured__img(src="./assets/images/jpg/featured-tools/tool-feature-image.jpg", alt="Tool's name" loading="lazy")
+			.tools__card__info
+				h3.tools__card__name.font__weight__normal.no-margin-block-start
+					a.tools__card__name__link.font-family-ff-base-400(href="#" target="_blank") Tool's name #{n + 1}
+				p.color-col-1-25.line-height-1-6.tools__card__description.font-family-ff-base-400 This is a placeholder text that is supposed to hold a short description of the tool, mainly focused on its purpose and/or use cases.
+				p.color-col-1-25.line-height-1-6.font-family-ff-base-400 Developed by 
+					a.tools__card__author.current-color(href="mailto:fulane@mail.com") Fulane
+				.tools__card__categories.display__flex.margin-b-s-24.gap-8
+					+toolCategoryLink('category-1', 'Category 1')
+					+toolCategoryLink('category-2', 'Category 2')
+					+toolCategoryLink('category-3', 'Category 3')
+		- n++
