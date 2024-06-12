@@ -257,7 +257,7 @@ async function main() {
         params.delete(config['VALID_FILTERS'][4]);
       }
   
-      history.replaceState(params, '', url);
+      history.replaceState(JSON.stringify(params), '', url);
   
       toolsSection.scrollIntoView();
     }
