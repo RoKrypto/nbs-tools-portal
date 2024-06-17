@@ -1,0 +1,1 @@
+The portal's page crafted with [HTML, CSS and JS](https://rokrypto.github.io/nbs-tools-portal/). The starting phases of this project required some planning with the members of the team, Copywriting and UI Design in [Figma](https://www.figma.com/design/rzxmGG3o5reEKDOn0vDtEl/NBS---Iniciativa-2023?node-id=0-1&t=fgQZXU94PcQ2BKnK-0).
